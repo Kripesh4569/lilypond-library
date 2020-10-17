@@ -26,7 +26,7 @@ upper = \relative c'' {
 
 lower = \relative c {
     \clef bass
-    \key b \minor
+    \key b \minor  % harmonic minor
     \time 4/4
     \set Staff.pedalSustainStyle = #'mixed
     

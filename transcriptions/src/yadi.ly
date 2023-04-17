@@ -5,27 +5,27 @@
 % Karma Band - Yadi
 
 % Rhythm
-OneTwoThreeAndFourB = \relative c {
-    b4^\accent <<dis4 fis>> b,8^\accent  <<dis4 fis>> <<dis8 fis>> |
+OneTwoAndNoThreeAndFourB = \relative c {
+    <<dis4 fis b>> fis'8^\accent b,4 b8 fis'4 |
 }
 
-OneTwoThreeAndFourE = \transpose b e' \OneTwoThreeAndFourB
-OneTwoThreeAndFourFSharp = \transpose b fis' \OneTwoThreeAndFourB
+OneTwoAndNoThreeAndFourE = \transpose b e' \OneTwoAndNoThreeAndFourB
+OneTwoAndNoThreeAndFourFSharp = \transpose b fis' \OneTwoAndNoThreeAndFourB
 
 % Intro
 IntroRhythm = \relative c {
-    \repeat unfold 2 \OneTwoThreeAndFourB
-    \OneTwoThreeAndFourE
-    \OneTwoThreeAndFourB
+    \repeat unfold 2 \OneTwoAndNoThreeAndFourB
+    \OneTwoAndNoThreeAndFourE
+    \OneTwoAndNoThreeAndFourB
 }
 
 %Verse
 Verse = \relative c {
     \repeat unfold 2 \IntroRhythm
-    \repeat unfold 4 \OneTwoThreeAndFourB
+    \repeat unfold 4 \OneTwoAndNoThreeAndFourB
     \repeat unfold 2 {
-        \repeat unfold 3 \OneTwoThreeAndFourFSharp
-        \OneTwoThreeAndFourB
+        \repeat unfold 3 \OneTwoAndNoThreeAndFourFSharp
+        \OneTwoAndNoThreeAndFourB
     }
 }
 

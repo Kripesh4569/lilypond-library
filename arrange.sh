@@ -1,7 +1,8 @@
 #!/bin/sh
 WORKDIRECTORY=/Users/godey/Documents/lilypond
-mv ${WORKDIRECTORY}/compositions/src/*.pdf  ${WORKDIRECTORY}/compositions/pdf/
-mv ${WORKDIRECTORY}/compositions/src/*.midi ${WORKDIRECTORY}/compositions/midi/
-
-mv ${WORKDIRECTORY}/transcriptions/src/*.pdf  ${WORKDIRECTORY}/transcriptions/pdf/
-mv ${WORKDIRECTORY}/transcriptions/src/*.midi ${WORKDIRECTORY}/transcriptions/midi/
+types=(compositions transcriptions rhythms)
+for i in "${types[@]}"
+do
+    mv ${WORKDIRECTORY}/${i}/src/*.pdf  ${WORKDIRECTORY}/${i}/pdf/
+    mv ${WORKDIRECTORY}/${i}/src/*.midi ${WORKDIRECTORY}/${i}/midi/
+done

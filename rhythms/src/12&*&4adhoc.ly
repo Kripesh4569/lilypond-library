@@ -2,28 +2,30 @@
 
 \include "articulate.ly"
 
+% Karma Band - Yadi
+
 % Rhythm
-OneTwoThreeAndNoFourAndB = \relative c {
-    b4^\accent <<dis4 fis>> b,8^\accent  <<dis4 fis>> <<dis8 fis>> |
+OneTwoAndNoThreeAndFourB = \relative c {
+    <<dis4 fis b>> fis'8^\accent b,4 b8 fis'4 |
 }
 
-OneTwoThreeAndNoFourAndE = \transpose b e' \OneTwoThreeAndNoFourAndB
-OneTwoThreeAndNoFourAndFSharp = \transpose b fis' \OneTwoThreeAndNoFourAndB
+OneTwoAndNoThreeAndFourE = \transpose b e' \OneTwoAndNoThreeAndFourB
+OneTwoAndNoThreeAndFourFSharp = \transpose b fis' \OneTwoAndNoThreeAndFourB
 
 % Intro
 IntroRhythm = \relative c {
-    \repeat unfold 2 \OneTwoThreeAndNoFourAndB
-    \OneTwoThreeAndNoFourAndE
-    \OneTwoThreeAndNoFourAndB
+    \repeat unfold 2 \OneTwoAndNoThreeAndFourB
+    \OneTwoAndNoThreeAndFourE
+    \OneTwoAndNoThreeAndFourB
 }
 
 %Verse
 Verse = \relative c {
     \repeat unfold 2 \IntroRhythm
-    \repeat unfold 4 \OneTwoThreeAndNoFourAndB
+    \repeat unfold 4 \OneTwoAndNoThreeAndFourB
     \repeat unfold 2 {
-        \repeat unfold 3 \OneTwoThreeAndNoFourAndFSharp
-        \OneTwoThreeAndNoFourAndB
+        \repeat unfold 3 \OneTwoAndNoThreeAndFourFSharp
+        \OneTwoAndNoThreeAndFourB
     }
 }
 
@@ -63,6 +65,6 @@ lower = \relative c {
     >>
     \layout { }
     \midi { 
-        \tempo 4 = 80
+        \tempo 4 = 160
     }
 }

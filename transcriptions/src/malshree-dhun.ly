@@ -6,7 +6,7 @@
 Bass = \relative c, {
     c4_5 g' c g_5 | % _5 fingering notation (_ tells lilypond to display the fingering at the bottom, ^ = top, - = default)
     c g' c, g_1 |
-    \repeat unfold 16  \relative c, {
+    \repeat unfold 22  \relative c, {
         c4 g' c g |
         c g' c, g |
     }
@@ -77,6 +77,36 @@ MelodyPartOne = \relative c'' {
         <g g'>4
     }
 
+    %part 3
+    \relative c'' {
+        d8^2 d4 d d8 |
+        d4 d16 ees8. 
+        % \articulate << \relative c'' { 
+        %     ees\turn 
+        %  } >>  
+         d8 c8 c4~ |
+        c c8 d4 c16 d8. c8 
+        b4 b4 c2 |
+        
+        r4 <d d'>8 4 4 8 |
+        4 <ees ees'> <d d'>8 <c c'>8 4~ |
+        4 8 <d d'>4 4 <c c'>8 
+        <b b'>4 4 <c c'>2 |
+
+        r4 <g g'>8 4 4 <f f'>8 |
+        <g g'>4 <b b'> <c c'> <d d'> |
+        r4 <bes bes'>8 4 4 <a a'>8 |
+        4 <g g'>4 2 |
+
+        % sub part 
+        \relative c' {
+            r4 f8 f4 f f8 |
+            f4 g f8 e8 f4 |
+        } 
+    }
+
+
+
 }
 
 upper = \relative c'' {
@@ -103,6 +133,6 @@ lower = \relative c {
     >>
     \layout { }
     \midi { 
-        \tempo 2 = 60
+        \tempo 2 = 70
     }
 }

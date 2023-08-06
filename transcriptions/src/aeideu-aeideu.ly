@@ -146,6 +146,20 @@ Bass = \relative c, {
     \VerseBass
 }
 
+% riff
+Riff = \relative c' {
+    a64 cis64~ cis32~ cis16 cis8 b\staccato a4
+    a64 cis64~ cis32~ cis16 cis8 b\staccato a4
+
+    a8 a fis a8 b16 a fis cis'4
+
+    a64 cis64~ cis32~ cis16 cis8 b\staccato a4
+    a64 cis64 d32~ d16 cis8 b\staccato a4
+
+    a8 a fis a8 b16 a fis a4
+
+    
+}
 
 % melody
 Melody = \relative c' {
@@ -171,11 +185,19 @@ lower = \relative c {
     \Bass
 }
 
+upperProxy = \relative c' {
+    \Riff
+}
+
+lowerProxy = \relative c {
+
+}
+
 \score {
     \new PianoStaff <<
         \set PianoStaff.instrumentName = #"Piano  "
-        \new Staff = "upper" \upper
-        \new Staff = "lower" \lower
+        \new Staff = "upper" \upperProxy
+        \new Staff = "lower" \lowerProxy
     >>
     \layout { }
     \midi { 

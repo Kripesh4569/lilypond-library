@@ -18,8 +18,13 @@ IntroRhythm = \relative c {
 
 % Intro Melody
 IntroMelody = \relative c {
-    \repeat unfold 4 \relative c {
-        r1 |
+    \repeat unfold 4 \relative c' {
+        r4 <e cis'>8 a8 b8 cis4 a8~ | 
+        a8 
+        <<
+        \new Voice { \voiceOne r8 cis8 b4 a4 fis8~ }
+            { \voiceTwo \relative c' {e4.~e2} \oneVoice }
+        >> |
     }
 }
 
